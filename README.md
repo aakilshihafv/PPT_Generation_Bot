@@ -1,14 +1,14 @@
 # PPT Generation Bot
 
 ## Overview
-The PPT Generation Bot is an advanced automation tool designed to streamline the creation of PowerPoint presentations. The bot takes a topic input from the user, retrieves relevant content and information using ChatGPT, generates AI images, creates a professional PPT, and sends it to the user. The entire process is automated using UiPath.
+The PPT Generation Bot is an advanced automation tool designed to streamline the creation of PowerPoint presentations. The bot takes a topic input from the user, retrieves relevant content and information using ChatGPT, generates AI images, creates a professional PPT, and sends it to the user through mail. The entire process is automated using UiPath.
 
 ## Features
 - **User Topic Input**: Users provide a topic for the presentation.
 - **Content Retrieval**: Uses OpenAI's ChatGPT to gather relevant content and information.
 - **AI Image Generation**: Creates high-quality AI images to enhance the presentation.
 - **PPT Creation**: Compiles the content and images into a PowerPoint presentation.
-- **Automated Delivery**: Utilizes UiPath to manage all steps and send the completed PPT to the user.
+- **Automated Delivery**: Utilizes UiPath to manage all steps and send the completed PPT to the user through mail.
 
 ## Technologies Used
 - **UiPath**: For automating the entire process, from content retrieval to PPT creation and delivery.
