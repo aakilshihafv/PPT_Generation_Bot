@@ -1,0 +1,713 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="870,14625.3333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="60">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Presentations.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Presentations</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Activities.Contracts</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="62">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="732,14560.6666666667" sap2010:WorkflowViewState.IdRef="Sequence_32">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="chicken" Name="Topic" />
+      <Variable x:TypeArguments="x:String" Default="give only 5 very short(two words) headings for " Name="Topser" />
+      <Variable x:TypeArguments="x:String" Name="Head1" />
+      <Variable x:TypeArguments="x:String" Name="Head2" />
+      <Variable x:TypeArguments="x:String" Name="Head3" />
+      <Variable x:TypeArguments="x:String" Name="h5c2" />
+      <Variable x:TypeArguments="x:String" Name="h5c1" />
+      <Variable x:TypeArguments="x:String" Name="h4c2" />
+      <Variable x:TypeArguments="x:String" Name="h4c1" />
+      <Variable x:TypeArguments="x:String" Name="h3c2" />
+      <Variable x:TypeArguments="x:String" Name="h3c1" />
+      <Variable x:TypeArguments="x:String" Name="h2c2" />
+      <Variable x:TypeArguments="x:String" Name="h2c1" />
+      <Variable x:TypeArguments="x:String" Name="h1c2" />
+      <Variable x:TypeArguments="x:String" Name="h1c1" />
+      <Variable x:TypeArguments="x:String" Default="mention another points In 60 words about Topic" Name="prehe2" />
+      <Variable x:TypeArguments="x:String" Default="brief in 30 words only about Topic" Name="prehe1" />
+      <Variable x:TypeArguments="x:String" Name="Head5" />
+      <Variable x:TypeArguments="x:String" Name="Head4" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\aakil\Downloads\" Name="imageurl" />
+      <Variable x:TypeArguments="x:String" Default="-0.jpg" Name="imageback0" />
+      <Variable x:TypeArguments="x:String" Default="-1.jpg" Name="imageback1" />
+      <Variable x:TypeArguments="x:String" Default="-2.jpg" Name="imageback2" />
+      <Variable x:TypeArguments="x:String" Default="-3.jpg" Name="imageback3" />
+      <Variable x:TypeArguments="x:String" Name="reci" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="670,6950" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="alltop" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="608,246" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the Topic" Title="PPT GENERATOr">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="x:String">[Topic]</OutArgument>
+        </ui:InputDialog.Result>
+      </ui:InputDialog>
+      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="608,246" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter the Email address " Title="EMail">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="x:String">[reci]</OutArgument>
+        </ui:InputDialog.Result>
+      </ui:InputDialog>
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="608,236.666666666667" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://chat.openai.com/">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,132.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="354,25.3333333333333" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TEXTAREA  prompt-textar...'" sap:VirtualizedContainerService.HintSize="608,135.333333333333" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[Topser+Topic+ &quot;[k(numEnter)]&quot;]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7884908a-6835-4b1a-a13b-cb9721af9257" InformativeScreenshot="bb191d69db4b7e10bd18b1220cd97116" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'LI'" sap:VirtualizedContainerService.HintSize="608,107.333333333333" sap2010:WorkflowViewState.IdRef="GetValue_1">
+        <ui:GetValue.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0b603d0b-76f7-4322-b434-347f7b2ad372" InformativeScreenshot="fcb230a2e32a80c088e078f722e9d066" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl isleaf='1' tag='LI' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:GetValue.Target>
+        <ui:GetValue.Value>
+          <OutArgument x:TypeArguments="x:String">[Head1]</OutArgument>
+        </ui:GetValue.Value>
+      </ui:GetValue>
+      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'LI'" sap:VirtualizedContainerService.HintSize="608,107.333333333333" sap2010:WorkflowViewState.IdRef="GetValue_2">
+        <ui:GetValue.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9f52b5da-76de-44bc-ba27-b2fdbd793733" InformativeScreenshot="2ed79bf79be2ad2f807321ef19b08fe4" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl idx='2' isleaf='1' tag='LI' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:GetValue.Target>
+        <ui:GetValue.Value>
+          <OutArgument x:TypeArguments="x:String">[Head2]</OutArgument>
+        </ui:GetValue.Value>
+      </ui:GetValue>
+      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'LI'" sap:VirtualizedContainerService.HintSize="608,107.333333333333" sap2010:WorkflowViewState.IdRef="GetValue_3">
+        <ui:GetValue.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c78a3a21-d710-463a-b5b0-c380add63bf4" InformativeScreenshot="422015451b32622a79c7d81044016fdf" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl idx='3' isleaf='1' tag='LI' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:GetValue.Target>
+        <ui:GetValue.Value>
+          <OutArgument x:TypeArguments="x:String">[Head3]</OutArgument>
+        </ui:GetValue.Value>
+      </ui:GetValue>
+      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'LI'" sap:VirtualizedContainerService.HintSize="608,107.333333333333" sap2010:WorkflowViewState.IdRef="GetValue_4">
+        <ui:GetValue.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="241d61ff-7701-46b3-995c-fcc95b0297a1" InformativeScreenshot="1aa020f7e14606168fb27917a852ebc9" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl idx='4' isleaf='1' tag='LI' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:GetValue.Target>
+        <ui:GetValue.Value>
+          <OutArgument x:TypeArguments="x:String">[Head4]</OutArgument>
+        </ui:GetValue.Value>
+      </ui:GetValue>
+      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'LI'" sap:VirtualizedContainerService.HintSize="608,107.333333333333" sap2010:WorkflowViewState.IdRef="GetValue_5">
+        <ui:GetValue.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="11526392-b0b0-4008-bca6-25b264a9a83b" InformativeScreenshot="c6ad6dbf493aee9a840cdcf1a5be2b02" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl idx='5' isleaf='1' tag='LI' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:GetValue.Target>
+        <ui:GetValue.Value>
+          <OutArgument x:TypeArguments="x:String">[Head5]</OutArgument>
+        </ui:GetValue.Value>
+      </ui:GetValue>
+      <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="608,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_30" />
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TEXTAREA  prompt-textar...'" sap:VirtualizedContainerService.HintSize="608,135.333333333333" sap2010:WorkflowViewState.IdRef="TypeInto_23" Text="[prehe1+&quot;1&quot;+ &quot;[k(enter)]&quot;]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10c4f491-574b-4671-a043-2fc65d78aa07" InformativeScreenshot="8aaa9226d69bbfdade7c11b25530723f" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="608,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_20" />
+      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'P'" sap:VirtualizedContainerService.HintSize="608,107.333333333333" sap2010:WorkflowViewState.IdRef="GetFullText_6">
+        <ui:GetFullText.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="02a2a906-94ad-4f34-98d9-e4620220af0d" InformativeScreenshot="15320275695abbd00aab0cdc9b0b83fb" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl tag='P' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:GetFullText.Target>
+        <ui:GetFullText.Text>
+          <OutArgument x:TypeArguments="x:String">[h1c1]</OutArgument>
+        </ui:GetFullText.Text>
+      </ui:GetFullText>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TEXTAREA  prompt-textar...'" sap:VirtualizedContainerService.HintSize="608,135.333333333333" sap2010:WorkflowViewState.IdRef="TypeInto_24" Text="[prehe2+&quot;1&quot;+ &quot;[k(enter)]&quot;]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2a37879e-9c4c-4097-a4d7-8d0853a0e21f" InformativeScreenshot="d61c483357a50db2306c273bd94a83cb" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="608,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_21" />
+      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'DIV'" sap:VirtualizedContainerService.HintSize="608,107.333333333333" sap2010:WorkflowViewState.IdRef="GetFullText_7">
+        <ui:GetFullText.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0d9c0154-d3a1-4a92-afa5-e308af09bd1c" InformativeScreenshot="f265d93d43f1c288d493944186aa6f77" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl idx='2' tag='P' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:GetFullText.Target>
+        <ui:GetFullText.Text>
+          <OutArgument x:TypeArguments="x:String">[h1c2]</OutArgument>
+        </ui:GetFullText.Text>
+      </ui:GetFullText>
+      <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="608,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_22" />
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TEXTAREA  prompt-textar...'" sap:VirtualizedContainerService.HintSize="608,135.333333333333" sap2010:WorkflowViewState.IdRef="TypeInto_25" Text="[prehe1+&quot;2&quot;+ &quot;[k(enter)]&quot;]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f07501a6-254d-4531-9dbf-169960107ec3" InformativeScreenshot="d61c483357a50db2306c273bd94a83cb" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="608,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_23" />
+      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'P'" sap:VirtualizedContainerService.HintSize="608,107.333333333333" sap2010:WorkflowViewState.IdRef="GetFullText_8">
+        <ui:GetFullText.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d4be82eb-546c-4384-a11b-5aadc68be470" InformativeScreenshot="4f2ed3644227fb62c8970aa53b48512b" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl idx='3' tag='P' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:GetFullText.Target>
+        <ui:GetFullText.Text>
+          <OutArgument x:TypeArguments="x:String">[h2c1]</OutArgument>
+        </ui:GetFullText.Text>
+      </ui:GetFullText>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TEXTAREA  prompt-textar...'" sap:VirtualizedContainerService.HintSize="608,135.333333333333" sap2010:WorkflowViewState.IdRef="TypeInto_26" Text="[prehe2+&quot;2&quot;+ &quot;[k(enter)]&quot;]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="13b48a54-0766-4fdd-b6be-93f951bed37a" InformativeScreenshot="16f82d771119bb11799ba626dc650767" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="608,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_24" />
+      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'P'" sap:VirtualizedContainerService.HintSize="608,107.333333333333" sap2010:WorkflowViewState.IdRef="GetFullText_9">
+        <ui:GetFullText.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f32e9d9-98d5-47d5-a636-56a3767075bb" InformativeScreenshot="4bb553a95a272cff13648e70b3334d98" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl idx='4' tag='P' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:GetFullText.Target>
+        <ui:GetFullText.Text>
+          <OutArgument x:TypeArguments="x:String">[h2c2]</OutArgument>
+        </ui:GetFullText.Text>
+      </ui:GetFullText>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TEXTAREA  prompt-textar...'" sap:VirtualizedContainerService.HintSize="608,135.333333333333" sap2010:WorkflowViewState.IdRef="TypeInto_28" Text="[prehe1+&quot;3&quot;+ &quot;[k(enter)]&quot;]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b023fc5a-d84f-4cd2-a87f-0ecc3f3c1df3" InformativeScreenshot="d61c483357a50db2306c273bd94a83cb" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="608,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_25" />
+      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'P'" sap:VirtualizedContainerService.HintSize="608,107.333333333333" sap2010:WorkflowViewState.IdRef="GetFullText_10">
+        <ui:GetFullText.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="be09a673-8a88-4fd8-920b-a3de689709aa" InformativeScreenshot="a9111a95700225e30dd0b4048be4e5b4" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl idx='5' tag='P' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:GetFullText.Target>
+        <ui:GetFullText.Text>
+          <OutArgument x:TypeArguments="x:String">[h3c1]</OutArgument>
+        </ui:GetFullText.Text>
+      </ui:GetFullText>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TEXTAREA  prompt-textar...'" sap:VirtualizedContainerService.HintSize="608,135.333333333333" sap2010:WorkflowViewState.IdRef="TypeInto_29" Text="[prehe2+&quot;3&quot;+ &quot;[k(enter)]&quot;]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a1d0bd92-80f5-4a3c-a9b0-42048bf198d6" InformativeScreenshot="04235391c183abafc66b70a98582a654" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="608,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_26" />
+      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'P'" sap:VirtualizedContainerService.HintSize="608,107.333333333333" sap2010:WorkflowViewState.IdRef="GetFullText_11">
+        <ui:GetFullText.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="911e1c03-b9d0-47be-a375-7dd5b611c564" InformativeScreenshot="20e7750dc6f7ed8639c68e6e97c06af3" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl idx='6' tag='P' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:GetFullText.Target>
+        <ui:GetFullText.Text>
+          <OutArgument x:TypeArguments="x:String">[h3c2]</OutArgument>
+        </ui:GetFullText.Text>
+      </ui:GetFullText>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TEXTAREA  prompt-textar...'" sap:VirtualizedContainerService.HintSize="608,135.333333333333" sap2010:WorkflowViewState.IdRef="TypeInto_30" Text="[prehe1+&quot;4&quot;+ &quot;[k(enter)]&quot;]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="42b59e17-2065-471e-946e-c3132bc2dd75" InformativeScreenshot="04235391c183abafc66b70a98582a654" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="608,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_27" />
+      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'P'" sap:VirtualizedContainerService.HintSize="608,107.333333333333" sap2010:WorkflowViewState.IdRef="GetFullText_12">
+        <ui:GetFullText.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="499884d6-74f9-416b-ad92-7654ea7c75d0" InformativeScreenshot="f11df9edc80c8451dd2ccc4c3e90f1fe" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl idx='7' tag='P' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:GetFullText.Target>
+        <ui:GetFullText.Text>
+          <OutArgument x:TypeArguments="x:String">[h4c1]</OutArgument>
+        </ui:GetFullText.Text>
+      </ui:GetFullText>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TEXTAREA  prompt-textar...'" sap:VirtualizedContainerService.HintSize="608,135.333333333333" sap2010:WorkflowViewState.IdRef="TypeInto_31" Text="[prehe2+&quot;4&quot;+ &quot;[k(enter)]&quot;]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="79d662a0-3f03-4b6f-9737-2941505eb1aa" InformativeScreenshot="04235391c183abafc66b70a98582a654" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="608,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_28" />
+      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'P'" sap:VirtualizedContainerService.HintSize="608,107.333333333333" sap2010:WorkflowViewState.IdRef="GetFullText_13">
+        <ui:GetFullText.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f3cc721f-fcf1-4297-9ffe-6c70c41d65fb" InformativeScreenshot="942830815a695b5c857b5234ea086b24" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl idx='8' tag='P' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:GetFullText.Target>
+        <ui:GetFullText.Text>
+          <OutArgument x:TypeArguments="x:String">[h4c2]</OutArgument>
+        </ui:GetFullText.Text>
+      </ui:GetFullText>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TEXTAREA  prompt-textar...'" sap:VirtualizedContainerService.HintSize="608,135.333333333333" sap2010:WorkflowViewState.IdRef="TypeInto_32" Text="[prehe1+&quot;5&quot;+ &quot;[k(enter)]&quot;]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d7ffcb87-9deb-4ba0-b895-d075d39e12df" InformativeScreenshot="d61c483357a50db2306c273bd94a83cb" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="608,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_29" />
+      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'P'" sap:VirtualizedContainerService.HintSize="608,107.333333333333" sap2010:WorkflowViewState.IdRef="GetFullText_14">
+        <ui:GetFullText.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0256145f-6b68-44ff-b0fc-b91aca4bb51d" InformativeScreenshot="77a753be240d53837df385d93c2000df" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl idx='9' tag='P' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:GetFullText.Target>
+        <ui:GetFullText.Text>
+          <OutArgument x:TypeArguments="x:String">[h5c1]</OutArgument>
+        </ui:GetFullText.Text>
+      </ui:GetFullText>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'TEXTAREA  prompt-textar...'" sap:VirtualizedContainerService.HintSize="608,135.333333333333" sap2010:WorkflowViewState.IdRef="TypeInto_33" Text="[prehe2+&quot;5&quot;+ &quot;[k(enter)]&quot;]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f8314120-6d8d-4158-9ced-1d5300fb56c5" InformativeScreenshot="04235391c183abafc66b70a98582a654" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <Delay Duration="00:00:06" sap:VirtualizedContainerService.HintSize="608,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_31" />
+      <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Full Text 'P'" sap:VirtualizedContainerService.HintSize="608,107.333333333333" sap2010:WorkflowViewState.IdRef="GetFullText_15">
+        <ui:GetFullText.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ca4f0d0e-9f84-4dd6-9733-692de7edc09a" InformativeScreenshot="1394cd36d8f637e58c2fba9a6a952bf3" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl idx='10' tag='P' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:GetFullText.Target>
+        <ui:GetFullText.Text>
+          <OutArgument x:TypeArguments="x:String">[h5c2]</OutArgument>
+        </ui:GetFullText.Text>
+      </ui:GetFullText>
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="608,1396" sap2010:WorkflowViewState.IdRef="OpenBrowser_14" Url="https://www.freepik.com/ai-images-editor?prompt=cyber+attacks&amp;style=noStyle">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="574,1292" sap2010:WorkflowViewState.IdRef="Sequence_35">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence sap:VirtualizedContainerService.HintSize="512,1184.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,136" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="388,25.3333333333333" sap2010:WorkflowViewState.IdRef="MaximizeWindow_14" />
+                </Sequence>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'FORM'" sap:VirtualizedContainerService.HintSize="450,156.666666666667" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="a" KeyModifiers="Ctrl">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e7a99168-d55f-43a2-8299-936363e22dc2" InformativeScreenshot="10c6e68784b1e34d202db398ed0a5bfd" Selector="&lt;webctrl tag='FORM' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                </ui:SendHotkey>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'FORM'" sap:VirtualizedContainerService.HintSize="450,156.666666666667" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="del" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1c107258-79c2-47e5-970b-04c04a84bc52" InformativeScreenshot="10c6e68784b1e34d202db398ed0a5bfd" Selector="&lt;webctrl tag='FORM' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                </ui:SendHotkey>
+                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'FORM'" sap:VirtualizedContainerService.HintSize="450,135.333333333333" sap2010:WorkflowViewState.IdRef="TypeInto_22" Text="[Topic]">
+                  <ui:TypeInto.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="266e20d1-8f88-4cd2-8cbd-e77e0135a257" InformativeScreenshot="c398d97baffb02ea81f4d32796115765" Selector="&lt;webctrl tag='FORM' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:TypeInto.Target>
+                </ui:TypeInto>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="450,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_40" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f00ce63-6a1b-47b0-9c83-e57e4ad82695" InformativeScreenshot="372d7867cf0908d56e5a30b52370dafc" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;button&amp;gt;span' parentid='app' tag='SPAN' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <Delay Duration="00:00:22" sap:VirtualizedContainerService.HintSize="450,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_10" />
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="450,107.333333333333" sap2010:WorkflowViewState.IdRef="Click_41" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="06254774-2bd8-4a72-afa2-d54ef341706c" InformativeScreenshot="9202ac2185f5211817a0d7054bc7d845" Selector="&lt;webctrl aaname='Download all' parentid='app' tag='SPAN' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <Delay Duration="00:00:07" sap:VirtualizedContainerService.HintSize="450,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_33" />
+              </Sequence>
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+    </Sequence>
+    <ui:PowerPointApplicationScope Password="{x:Null}" CreateIfNotExists="True" DisplayName="Use PowerPoint Presentation" sap:VirtualizedContainerService.HintSize="670,6991.33333333333" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_1" PresentationPath="final.pptx" TemplatePath="sampleppt.pptx" UseThemeFile="True">
+      <ui:PowerPointApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:IPresentationQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IPresentationQuickHandle" Name="PowerPoint" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,6735.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_34">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="530,25.3333333333333" sap2010:WorkflowViewState.IdRef="Delay_32" />
+            <ui:PowerPointApplicationScope Password="{x:Null}" AutoSave="False" CreateIfNotExists="True" DisplayName="Use PowerPoint Presentation" sap:VirtualizedContainerService.HintSize="530,6570.66666666667" sap2010:WorkflowViewState.IdRef="PowerPointApplicationScope_2" PresentationPath="final.pptx" TemplatePath="sampleppt.pptx" UseThemeFile="True">
+              <ui:PowerPointApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:IPresentationQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IPresentationQuickHandle" Name="PowerPoint" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,6314.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_2" Presentation="[PowerPoint]" ShapeName="Title 1" SlideIndex="[1]" Text="[Topic]" />
+                    <ui:ReplaceShapeWithMedia Height="{x:Null}" Left="{x:Null}" Top="{x:Null}" Width="{x:Null}" DisplayName="Add Image/Video to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="ReplaceShapeWithMedia_2" Media="[imageurl+Topic+imageback0]" Presentation="[PowerPoint]" ShapeName="Content Placeholder 4" SlideIndex="[1]" />
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_4" Presentation="[PowerPoint]" ShapeName="Text Placeholder 2" SlideIndex="[3]" Text="[Head1]" />
+                    <ui:ReplaceShapeWithMedia Height="{x:Null}" Left="{x:Null}" Top="{x:Null}" Width="{x:Null}" DisplayName="Add Image/Video to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="ReplaceShapeWithMedia_3" Media="[imageurl+Topic+imageback1]" Presentation="[PowerPoint]" ShapeName="Content Placeholder 2" SlideIndex="[4]" />
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_5" Presentation="[PowerPoint]" ShapeName="Text Placeholder 3" SlideIndex="[4]" Text="[h1c1]" />
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_6" Presentation="[PowerPoint]" ShapeName="Text Placeholder 2" SlideIndex="[5]" Text="[h1c2]" />
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_7" Presentation="[PowerPoint]" ShapeName="Text Placeholder 2" SlideIndex="[6]" Text="[Head2]" />
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_8" Presentation="[PowerPoint]" ShapeName="Text Placeholder 3" SlideIndex="[7]" Text="[h2c1]" />
+                    <ui:ReplaceShapeWithMedia Height="{x:Null}" Left="{x:Null}" Top="{x:Null}" Width="{x:Null}" DisplayName="Add Image/Video to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="ReplaceShapeWithMedia_4" Media="[imageurl+Topic+imageback2]" Presentation="[PowerPoint]" ShapeName="Content Placeholder 2" SlideIndex="[7]" />
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_9" Presentation="[PowerPoint]" ShapeName="Text Placeholder 2" SlideIndex="[8]" Text="[h2c2]" />
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_10" Presentation="[PowerPoint]" ShapeName="Text Placeholder 2" SlideIndex="[9]" Text="[Head3]" />
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_11" Presentation="[PowerPoint]" ShapeName="Text Placeholder 3" SlideIndex="[10]" Text="[h3c1]" />
+                    <ui:ReplaceShapeWithMedia Height="{x:Null}" Left="{x:Null}" Top="{x:Null}" Width="{x:Null}" DisplayName="Add Image/Video to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="ReplaceShapeWithMedia_5" Media="[imageurl+Topic+imageback0]" Presentation="[PowerPoint]" ShapeName="Content Placeholder 2" SlideIndex="[10]" />
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_12" Presentation="[PowerPoint]" ShapeName="Text Placeholder 2" SlideIndex="[11]" Text="[h3c2]" />
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_13" Presentation="[PowerPoint]" ShapeName="Text Placeholder 2" SlideIndex="[12]" Text="[Head4]" />
+                    <ui:ReplaceShapeWithMedia Height="{x:Null}" Left="{x:Null}" Top="{x:Null}" Width="{x:Null}" DisplayName="Add Image/Video to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="ReplaceShapeWithMedia_7" Media="[imageurl+Topic+imageback3]" Presentation="[PowerPoint]" ShapeName="Content Placeholder 2" SlideIndex="[13]" />
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_14" Presentation="[PowerPoint]" ShapeName="Text Placeholder 3" SlideIndex="[13]" Text="[h4c1]" />
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_15" Presentation="[PowerPoint]" ShapeName="Text Placeholder 2" SlideIndex="14" Text="[h4c2]" />
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_16" Presentation="[PowerPoint]" ShapeName="Text Placeholder 2" SlideIndex="[15]" Text="[Head5]" />
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_17" Presentation="[PowerPoint]" ShapeName="Text Placeholder 3" SlideIndex="[16]" Text="[h5c1]" />
+                    <ui:ReplaceShapeWithMedia Height="{x:Null}" Left="{x:Null}" Top="{x:Null}" Width="{x:Null}" DisplayName="Add Image/Video to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="ReplaceShapeWithMedia_8" Media="[imageurl+Topic+imageback1]" Presentation="[PowerPoint]" ShapeName="Content Placeholder 2" SlideIndex="[16]" />
+                    <ui:InsertTextInPresentation DisplayName="Add Text to Slide" sap:VirtualizedContainerService.HintSize="434,240" sap2010:WorkflowViewState.IdRef="InsertTextInPresentation_18" Presentation="[PowerPoint]" ShapeName="Text Placeholder 2" SlideIndex="[17]" Text="[h5c2]" />
+                    <ui:SavePresentationFileAs DisplayName="Save PowerPoint File As" FilePath="[Topic]" sap:VirtualizedContainerService.HintSize="434,223.333333333333" sap2010:WorkflowViewState.IdRef="SavePresentationFileAs_1" Presentation="[PowerPoint]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:PowerPointApplicationScope.Body>
+            </ui:PowerPointApplicationScope>
+          </Sequence>
+        </ActivityAction>
+      </ui:PowerPointApplicationScope.Body>
+    </ui:PowerPointApplicationScope>
+    <Sequence DisplayName="Sequence4" sap:VirtualizedContainerService.HintSize="670,444.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_37">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="pass" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="388,25.3333333333333" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAqL46lJrre0e7NPE+WshyWQAAAAACAAAAAAAQZgAAAAEAACAAAACoXLtL2b48eFHUYaobMZgXdwqFt+5xWJ/QUGxFKj7MkwAAAAAOgAAAAAIAACAAAAAsuBJMcjB1kQj76zofY/ItfDnYQhKoD9dzU7nBaj/15hAAAAD5oCmQPwkCSx3L/F5k8SBPQAAAAEjfdsRIvuyJHOU/mPvRWvN5LLrp2GMceUC6rQXhwO3wUOHSNkNmXVL4h+xYjZ2/NCzgO11F8Na/dRc13B9My9k=" Result="[pass]" />
+      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="here is your ppt that u have requested" DisplayName="Send SMTP Mail Message" Email="210701004@rajalakshmi.edu.in" EnableSSL="True" From="210701004@rajalakshmi.edu.in" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[pass]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="ai generated ppt" To="[reci]">
+        <ui:SendMail.Files>
+          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+            <InArgument x:TypeArguments="x:String">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;C:\Users\aakil\OneDrive\Documents\UiPath\rpapro\&quot;+Topic+&quot;1.pptx&quot;" />
+            </InArgument>
+          </scg:List>
+        </ui:SendMail.Files>
+      </ui:SendMail>
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,86.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Please check your mail&quot;]" />
+    </Sequence>
+  </Sequence>
+</Activity>
